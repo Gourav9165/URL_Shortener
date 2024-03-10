@@ -15,7 +15,7 @@ def home():
             id = secrets.token_urlsafe(5)
             shortened_url = request.base_url + id
             shortened_urls.append({"destination_url": form.url.data, "id": id})
-            flash(f"Shortened URL: {shortened_url}", "success message")
+            flash(f"Shortened URL:\n {shortened_url}", "success message")
             form.url.data=''
         else:
             flash("Invalid URL!", "error message")
